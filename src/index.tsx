@@ -5,6 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import { Notifications } from './components/notifications';
+import {CreateFeedPage} from "./components/create-feed";
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
@@ -14,6 +15,7 @@ root.render(
       <Route path="/" element={
           <App/>}>
         <Route  path='notifications' element={<Notifications/>} />
+        <Route path="add" element={<CreateFeedPage/>}/>
       </Route>
     </Routes>
   </BrowserRouter>

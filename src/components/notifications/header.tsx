@@ -2,9 +2,11 @@ import React from "react";
 import { Button } from '@mantine/core';
 import { IconDatabase } from '@tabler/icons-react';
 import {dark} from "@mantine/prism/lib/Prism/prism-theme";
+import {useNavigate} from "react-router-dom";
 
 
 export function  NotificationHeader(){
+  const navigation = useNavigate();
 
   return (
     <>
@@ -13,7 +15,7 @@ export function  NotificationHeader(){
         </div>
         <div className="flex flex-row gap-x-4 items-center">
           <div className="flex gap-x-4">
-            <Button className="text-small leading-5 rounded inline-flex items-center bg-primary-1000 hover:shadow text-white px-4 h-8 cursor-pointer">
+            <Button onClick={()=>{navigation("/add")}} className="text-small leading-5 rounded inline-flex items-center bg-primary-1000 hover:shadow text-white px-4 h-8 cursor-pointer">
               Create Note</Button>
           </div>
         </div>
